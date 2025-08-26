@@ -1,43 +1,54 @@
 /* Navbar */
 .navbar {
-  position: fixed;       /* stays visible */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: #c0c0c0;   /* retro gray */
-  border-bottom: 2px solid #666; /* retro "shadow" line */
-  padding: 8px 15px;
+  background: #c0c0c0;
+  border-bottom: 2px solid #666;
+  padding: 12px 20px;   /* bigger padding */
   display: flex;
-  gap: 20px;
+  gap: 25px;            /* more space between links */
   font-family: "Tahoma", "Verdana", sans-serif;
-  font-size: 14px;
+  font-size: 16px;      /* bigger text */
   z-index: 1000;
 }
 
 /* Push content down */
 body {
   margin: 0;
-  padding-top: 50px; /* adjust to navbar height */
+  padding-top: 60px; /* adjust to navbar height */
 }
 
 /* Links */
 .navbar a {
   text-decoration: none;
   color: black;
-  padding: 6px 12px;
+  padding: 8px 14px;      /* bigger clickable area */
   background: #e0e0e0;
   border: 2px solid #999;
-  border-top-color: #fff;   /* top light edge */
+  border-top-color: #fff;
   border-left-color: #fff;
-  border-bottom-color: #666; /* bottom dark edge */
+  border-bottom-color: #666;
   border-right-color: #666;
+  transition: background 0.1s ease-in-out;
 }
 
-/* Hover effect (pressed button) */
+/* Hover effect */
 .navbar a:hover {
   background: #d4d0c8;
   border-top-color: #666;
   border-left-color: #666;
   border-bottom-color: #fff;
   border-right-color: #fff;
+}
+
+/* Active link */
+.navbar a.active {
+  background: #d4d0c8;
+  border-top-color: #666;
+  border-left-color: #666;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  font-weight: bold;
 }
