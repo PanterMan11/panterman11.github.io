@@ -1,0 +1,43 @@
+/* Navbar */
+.navbar {
+  position: fixed;       /* stays visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #c0c0c0;   /* retro gray */
+  border-bottom: 2px solid #666; /* retro "shadow" line */
+  padding: 8px 15px;
+  display: flex;
+  gap: 20px;
+  font-family: "Tahoma", "Verdana", sans-serif;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+/* Push content down */
+body {
+  margin: 0;
+  padding-top: 50px; /* adjust to navbar height */
+}
+
+/* Links */
+.navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 6px 12px;
+  background: #e0e0e0;
+  border: 2px solid #999;
+  border-top-color: #fff;   /* top light edge */
+  border-left-color: #fff;
+  border-bottom-color: #666; /* bottom dark edge */
+  border-right-color: #666;
+}
+
+/* Hover effect (pressed button) */
+.navbar a:hover {
+  background: #d4d0c8;
+  border-top-color: #666;
+  border-left-color: #666;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
