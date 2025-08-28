@@ -12,5 +12,32 @@
             <a href="/works/">Works</a>
             <a href="/other">Other</a>
         </nav>
+
+        <main>
+            <h1>All Posts</h1>
+            <div id="posts-container"></div>
+        </main>
+
+        <footer>Goodbye...</footer>
+        <script>
+            fetch("/posts/posts.json")
+            .then(response => {
+                if (!response.ok) throw new Error("Network error");
+                return response.json();
+            })
+            .then(posts => {
+                const container = document.getElementById("posts-container");
+                posts.forEach(post => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <h3><a href="${post.link}">${post.title}</a></h3>
+                    <p>${post.description}</p>
+                `;
+                container.appendChild(card);
+                });
+            })
+            .catch(err => console.error("Error loading posts:", err));
+        </script>
     </body>
 </html>

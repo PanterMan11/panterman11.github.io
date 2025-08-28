@@ -12,9 +12,54 @@
             <a href="/works/">Works</a>
             <a href="/other">Other</a>
         </nav>
-        <div class="welcome">
-            <h1>Welcome to my blog (?)</h1>
-            <p>I guess I gotta add a description here lol</p>
-        </div>
+        <main>
+            <h1>Welcome to my page</h1>
+            <p>This is a page I made for posting stuff. It's really just a hobby type of thing, who knows what I'll use this for?</p>
+
+            <h2>Latest Posts</h2>
+            <div id="posts-container">
+                <p>Loading...</p>
+            </div>
+
+            <h2>Works</h2>
+            <div class="card">
+                <h3><a href="/works/light/">Light and Dark</a></h3>
+                <p>A project I really wanna work on. Who knows, maybe it will be revealed one day?</p>
+            </div>
+        </main>
+
+        <footer>Goodbye...</footer>
+
+        <script>
+            fetch("/posts/posts.json")
+                .then(response => {
+                    if(!response.ok) throw new Error("Network error");
+                    return response.json();
+                })
+                .then(posts => {
+                    const container = document.getElementById("posts-container");
+                    container.innerHTML = "";
+
+                    posts.slice(0, 3).forEach(post => {
+                        const link = document.createElement("a");
+                        link.href = post.link;
+                        link.textContext = post.title;
+                        link.className = "post-title";
+                        container.appendChild(link);
+                    });
+
+                    if (posts.length > 3){
+                        const seeAll = document.createElement("a");
+                        seeAll.href = "/posts/";
+                        seeAll.textContent = "See all posts →";
+                        seeAll.className = "see-all";
+                        container.appendChild(seeAll);
+                    }
+                })
+                .catch(error=>{
+                    document.getElementById("posts-container").innerHTML = "<p>Couldn’t load posts.</p>";
+                });
+        </script>
+        
     </body>
 </html>

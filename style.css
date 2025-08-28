@@ -53,6 +53,49 @@ body {
   font-weight: bold;
 }
 
-.welcome {
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
     font-family: "Tahoma", "Verdana", sans-serif;
 }
+
+h2 {
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* Nostalgic but clean content cards */
+.card {
+  background: #fff;
+  border: 2px solid #ccc;
+  box-shadow: 3px 3px 0 #999;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 4px;
+  transition: transform 0.1s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  border-color: #003366;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.card p {
+  margin: 8px 0 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #eee;
+    margin-top: 30px;
+    font-size: 0.9em;
+  }
+

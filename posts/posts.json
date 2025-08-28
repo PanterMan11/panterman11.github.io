@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Post1",
+        "link": "/posts/1",
+        "description": "Just a test post"
+    },
+    {
+        "title": "Post2",
+        "link": "/posts/2",
+        "description": "But this is another test post"
+    }
+]
