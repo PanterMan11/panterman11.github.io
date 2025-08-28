@@ -1,0 +1,35 @@
+/* Nostalgic "card" look */
+ .card {
+  background: #e0e0e0;
+  border: 2px solid #999;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #666;
+  border-right-color: #666;
+  margin: 15px 0;
+  padding: 12px 14px;
+  font-size: 14px;
+  box-shadow: none; /* remove modern shadow */
+  border-radius: 0; /* sharp edges, 90s style */
+  transition: background 0.1s;
+}
+
+.card:hover {
+  background: #d4d0c8;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: black;
+}
+
+.card p {
+  margin: 8px 0 0;
+}
+
+/* Links inside cards */
+.card a {
+  color: blue;
+  text-decoration: underline;
+} 

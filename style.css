@@ -74,40 +74,58 @@ h2 {
   font-size: 18px;
 }
 
-/* Nostalgic "card" look */
-.card {
-  background: #e0e0e0;
-  border: 2px solid #999;
-  border-top-color: #fff;
-  border-left-color: #fff;
-  border-bottom-color: #666;
-  border-right-color: #666;
-  margin: 15px 0;
-  padding: 12px 14px;
+
+
+/* Posts list cards styled like Win98 file explorer */
+#posts-container {
+  margin-top: 20px;
+  font-family: "Tahoma", "Verdana", sans-serif;
   font-size: 14px;
-  box-shadow: none; /* remove modern shadow */
-  border-radius: 0; /* sharp edges, 90s style */
-  transition: background 0.1s;
 }
 
-.card:hover {
-  background: #d4d0c8;
+#posts-container .card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  margin: 4px 0;
+  border: 1px solid transparent;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
-.card h3 {
-  margin: 0 0 8px;
+/* Fake "file icon" */
+#posts-container .card::before {
+  content: "📄"; /* could be replaced with <img> for a retro bitmap */
   font-size: 16px;
-  color: black;
 }
 
-.card p {
-  margin: 8px 0 0;
+/* Hover effect = classic selection */
+#posts-container .card:hover {
+  background: #0a246a;
+  color: #fff;
+  border: 1px dotted #fff;
 }
 
-/* Links inside cards */
-.card a {
-  color: blue;
-  text-decoration: underline;
+/* Post titles */
+#posts-container .card h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Links inside card */
+#posts-container .card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Description under title */
+#posts-container .card p {
+  margin: 2px 0 0 24px; /* indented under icon/title */
+  font-size: 12px;
+  color: #555;
 }
 
 /* Footer styled like navbar */
