@@ -43,7 +43,7 @@
                     posts.slice(0, 3).forEach(post => {
                         const link = document.createElement("a");
                         link.href = post.link;
-                        link.textContext = post.title;
+                        link.textContent = post.title;
                         link.className = "post-title";
                         container.appendChild(link);
                     });
