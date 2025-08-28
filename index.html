@@ -41,10 +41,11 @@
                     container.innerHTML = "";
 
                     posts.slice(0, 3).forEach(post => {
-                        const link = document.createElement("a");
-                        link.href = post.link;
-                        link.textContent = post.title;
-                        link.className = "post-title";
+                        const card = document.createElement("div");
+                        card.className = "card";
+                        card.innerHTML = `
+                            <h3><a href="${post.link}">${post.title}</a></h3>
+                        `;
                         container.appendChild(link);
                     });
 
