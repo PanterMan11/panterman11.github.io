@@ -54,48 +54,69 @@ body {
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 10px;
-    font-family: "Tahoma", "Verdana", sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+  font-family: "Tahoma", "Verdana", sans-serif;
+  color: black;
 }
 
+/* Section headers (consistent with navbar borders) */
 h2 {
-  border-bottom: 2px solid #003366;
-  padding-bottom: 5px;
+  background: #c0c0c0;
+  padding: 6px 10px;
+  border: 2px solid #999;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #666;
+  border-right-color: #666;
   margin-top: 30px;
+  font-size: 18px;
 }
 
-/* Nostalgic but clean content cards */
+/* Nostalgic "card" look */
 .card {
-  background: #fff;
-  border: 2px solid #ccc;
-  box-shadow: 3px 3px 0 #999;
+  background: #e0e0e0;
+  border: 2px solid #999;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #666;
+  border-right-color: #666;
   margin: 15px 0;
-  padding: 15px;
-  border-radius: 4px;
-  transition: transform 0.1s;
+  padding: 12px 14px;
+  font-size: 14px;
+  box-shadow: none; /* remove modern shadow */
+  border-radius: 0; /* sharp edges, 90s style */
+  transition: background 0.1s;
 }
 
 .card:hover {
-  transform: scale(1.01);
-  border-color: #003366;
+  background: #d4d0c8;
 }
 
 .card h3 {
-  margin-top: 0;
-  color: #003366;
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: black;
 }
 
 .card p {
   margin: 8px 0 0;
 }
 
+/* Links inside cards */
+.card a {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Footer styled like navbar */
 footer {
-    text-align: center;
-    padding: 15px;
-    background: #eee;
-    margin-top: 30px;
-    font-size: 0.9em;
-  }
+  text-align: center;
+  padding: 10px;
+  background: #c0c0c0;
+  border-top: 2px solid #666;
+  font-size: 0.85em;
+  border-bottom: 2px solid #fff; /* subtle "raised" look */
+}
 
